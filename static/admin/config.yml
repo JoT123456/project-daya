@@ -1,0 +1,110 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder:  "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ── Homepage (About + Contact) ─────────────────────────────────────────
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Homepage Content"
+        file: "content/_index.md"
+        fields:
+
+          # About section
+          - label: "About — Headline"
+            name: about_headline
+            widget: string
+            hint: "The heading shown above the About text"
+
+          - label: "About — Body Text"
+            name: about_body
+            widget: markdown
+            hint: "Main description of Project Daya. Supports bold, italic, and bullet points."
+
+          - label: "About — Team Photo"
+            name: about_image
+            widget: image
+            required: false
+            hint: "Optional team or event photo shown beside the About text"
+
+          # Contact section
+          - label: "Contact — Headline"
+            name: contact_headline
+            widget: string
+
+          - label: "Contact — Intro Text"
+            name: contact_intro
+            widget: text
+            hint: "Short paragraph shown above the email and WhatsApp buttons"
+
+          - label: "Contact — Email Address"
+            name: contact_email
+            widget: string
+            hint: "e.g. hello@projectdaya.sg"
+
+          - label: "Contact — WhatsApp Link"
+            name: contact_whatsapp
+            widget: string
+            hint: "Full WhatsApp URL, e.g. https://wa.me/6591234567"
+
+          - label: "Show volunteer sign-up form?"
+            name: contact_show_form
+            widget: boolean
+            default: true
+            hint: "Toggle the sign-up form on or off"
+
+  # ── Site Data ──────────────────────────────────────────────────────────
+  - name: "data_files"
+    label: "Site Data"
+    files:
+
+      # What We Do
+      - name: "services"
+        label: "What We Do — Services"
+        file: "data/services.json"
+        fields:
+          - label: "Services"
+            name: items
+            widget: list
+            summary: "{{fields.title}}"
+            hint: "Click '+ Add Services' to add a new activity card"
+            fields:
+              - label: "Icon (emoji)"
+                name: icon
+                widget: string
+                hint: "Paste any emoji, e.g. 🏠 🤝 📚"
+              - label: "Service Name"
+                name: title
+                widget: string
+              - label: "Description"
+                name: description
+                widget: text
+
+      # Gallery
+      - name: "gallery"
+        label: "Gallery — Photos"
+        file: "data/gallery.json"
+        fields:
+          - label: "Photos"
+            name: items
+            widget: list
+            summary: "{{fields.caption}}"
+            hint: "Click '+ Add Photos' to upload an event photo"
+            fields:
+              - label: "Photo"
+                name: image
+                widget: image
+              - label: "Caption"
+                name: caption
+                widget: string
+                hint: "Short description shown below the photo"
+              - label: "Alt Text"
+                name: alt
+                widget: string
+                hint: "Describe the photo for accessibility (e.g. 'Volunteers at the community garden')"

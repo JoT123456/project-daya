@@ -1,0 +1,13 @@
+baseURL = "https://projectdaya.netlify.app/"
+languageCode = "en-sg"
+title = "Project Daya"
+
+[params]
+  description = "A community service volunteering project dedicated to uplifting lives. Est. 2013."
+  heroTagline  = "Serving Together, Growing Together"
+  heroSubline  = "Est. 2013 — Uplifting our community, one act at a time."
+
+[taxonomies]
+
+[markup.goldmark.renderer]
+  unsafe = true

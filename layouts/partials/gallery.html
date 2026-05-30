@@ -1,0 +1,18 @@
+{{ $gallery := site.Data.gallery.items }}
+<section id="gallery" class="section">
+  <div class="container">
+    <h2>Gallery</h2>
+    {{ if $gallery }}
+    <div class="gallery-grid">
+      {{ range $gallery }}
+      <figure class="gallery-item">
+        <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" />
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="gallery-empty">Photos coming soon — check back after our next event!</p>
+    {{ end }}
+  </div>
+</section>

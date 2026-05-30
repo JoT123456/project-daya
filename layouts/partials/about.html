@@ -1,0 +1,15 @@
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-text">
+        <h2>{{ .Params.about_headline }}</h2>
+        <div class="about-body">{{ .Params.about_body | markdownify }}</div>
+      </div>
+      {{ with .Params.about_image }}
+      <div class="about-image-wrap">
+        <img src="{{ . }}" alt="Project Daya volunteers" class="about-img" />
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

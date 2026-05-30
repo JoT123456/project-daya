@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section id="hero">
+    <div class="hero-inner">
+      <img src="/images/Dayalogo.jpg" alt="Project Daya logo" class="hero-logo" />
+      <h1>{{ .Site.Params.heroTagline }}</h1>
+      <p class="hero-sub">{{ .Site.Params.heroSubline }}</p>
+      <a href="#contact" class="btn btn--primary">Get Involved</a>
+    </div>
+  </section>
+  {{ partial "about.html"    . }}
+  {{ partial "services.html" . }}
+  {{ partial "gallery.html"  . }}
+  {{ partial "contact.html"  . }}
+{{ end }}

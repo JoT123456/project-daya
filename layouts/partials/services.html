@@ -1,0 +1,15 @@
+{{ $services := site.Data.services.items }}
+<section id="services" class="section section--alt">
+  <div class="container">
+    <h2>What We Do</h2>
+    <div class="services-grid">
+      {{ range $services }}
+      <div class="service-card">
+        <span class="service-icon">{{ .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

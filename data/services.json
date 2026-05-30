@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "icon": "🏠",
+      "title": "Lorem Ipsum Service",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "icon": "🤝",
+      "title": "Consectetur Activity",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute."
+    },
+    {
+      "icon": "📚",
+      "title": "Adipiscing Programme",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint."
+    },
+    {
+      "icon": "🌱",
+      "title": "Tempor Initiative",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum et more."
+    }
+  ]
+}

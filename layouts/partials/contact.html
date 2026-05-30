@@ -1,0 +1,24 @@
+<section id="contact" class="section section--alt">
+  <div class="container">
+    <h2>{{ .Params.contact_headline }}</h2>
+    <p class="contact-intro">{{ .Params.contact_intro }}</p>
+    <div class="contact-links">
+      {{ with .Params.contact_email }}
+      <a href="mailto:{{ . }}" class="btn btn--primary">Email Us</a>
+      {{ end }}
+      {{ with .Params.contact_whatsapp }}
+      <a href="{{ . }}" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp</a>
+      {{ end }}
+    </div>
+    {{ if .Params.contact_show_form }}
+    <form name="volunteer-signup" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="volunteer-signup" />
+      <input type="text"  name="name"    placeholder="Your Name"              required />
+      <input type="email" name="email"   placeholder="Your Email"             required />
+      <input type="text"  name="school"  placeholder="School / Organisation"          />
+      <textarea           name="message" placeholder="Tell us a bit about yourself" rows="4"></textarea>
+      <button type="submit" class="btn btn--primary">Sign Up to Volunteer</button>
+    </form>
+    {{ end }}
+  </div>
+</section>
